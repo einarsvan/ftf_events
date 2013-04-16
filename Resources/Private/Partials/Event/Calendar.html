@@ -1,0 +1,62 @@
+			<h2>
+			<f:if condition="{selectedCalendar} > 0">
+				<f:then>
+					<f:for each="{calendars}" as="cal">
+						<f:if condition="{selectedCalendar} == {cal.uid}">
+							{cal.name}
+						</f:if>
+					</f:for>
+				</f:then>
+				<f:else>
+					Alle kalender
+				</f:else>
+			</f:if>	
+			</h2>
+			
+			<div class="calendar-changer">
+				<p>Skift kalender</p>
+				<ul class="calendar-menu">
+				<f:for each="{calendars}" as="cal">
+					<li>
+						<f:link.action action="calendar" controller="Event" arguments="{start: selectedMonth, calendar: cal.uid, active: selectedDate}" class="ajaxLink">{cal.name}</f:link.action>
+					</li>
+				</f:for>
+				</ul>
+			</div>
+			
+			<table cellspacing="0" cellpadding="0">
+			
+				<tbody>
+			
+			
+					<f:for each="{calendar}" as="week">
+						<tr>
+							<f:for each="{week}" as="day">
+								<td class="{f:if(condition:'{day.disabled}', then:'informative', else:'current')}{f:if(condition:'{day.events}', then:' event', else:'')}{f:if(condition:'{day.active}', then:' act', else:'')}" >
+									<time datetime="<f:format.date format="Y-m-d">{day.date}</f:format.date>">
+										<span class="date"><f:format.date format="d">{day.date}</f:format.date></span>
+										<span class="month-weekday-year"><f:format.date format="F, l, Y">{day.date}</f:format.date></span>
+									</time>
+									<f:if condition="{day.events}">
+										<ul>
+											<f:for each="{day.events}" as="event">
+												<li>
+													<span class="event-start"><f:format.date format="H:i">{event.eventStart}</f:format.date></span>
+													<span class="event-title">{event.title}</span>
+													<span class="event-description">{event.description} <span class="close-description">Luk</span></span>
+												</li>
+											</f:for>
+										</ul>
+									</f:if>
+								</td>
+							</f:for>
+						</tr>
+					</f:for>
+				
+				</tbody>
+			</table>
+			
+			<div class="navigation">
+				<f:link.action action="calendar" controller="Event" pageUid="{settings.listViewPid}" arguments="{start: prevMonth, calendar: selectedCalendar, active: selectedDate}" class="ajaxLink">Prev</f:link.action>
+				<f:link.action action="calendar" controller="Event" pageUid="{settings.listViewPid}" arguments="{start: nextMonth, calendar: selectedCalendar, active: selectedDate}" class="ajaxLink">Next</f:link.action>
+			</div>

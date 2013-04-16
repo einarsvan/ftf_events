@@ -1,0 +1,24 @@
+
+# Plugin setup
+plugin.tx_ftfevents {
+	view {
+		templateRootPath = {$plugin.tx_ftfevents.view.templateRootPath}
+		partialRootPath = {$plugin.tx_ftfevents.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_ftfevents.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_ftfevents.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
+
+# Include page resources
+page {
+	# FTF Events css file
+	includeCSS.ftfEvents = EXT:ftf_events/Resources/Public/Css/ftfEvents.css
+	# FTF Events javascript file
+	includeJSFooter.ftfEvents = EXT:ftf_events/Resources/Public/JavaScript/ftfEvents.js
+}

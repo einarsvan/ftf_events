@@ -1,0 +1,21 @@
+<f:if condition="{ajax} != 1">
+
+<div class="tx-ftf-events">
+	<div class="ftfcal">
+
+		<div id="calcontent">
+		
+</f:if>
+
+			<f:render partial="Event/Calendar" arguments="{_all}" />
+
+<f:if condition="{ajax} != 1">
+		
+		</div>
+		
+		<div class="today"></div>
+		<div class="agenda"></div>
+	
+	</div>
+</div>  	
+</f:if>

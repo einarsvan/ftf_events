@@ -1,0 +1,31 @@
+/*
+ * Ext: FTF Events - General styling
+ */
+
+.tx-ftf-events {position: relative; background: #282828; color: #fff; padding: 20px 25px;}
+.tx-ftf-events table {}
+.tx-ftf-events td {border: 1px solid #3e3e3e; color: #fff;}
+.tx-ftf-events td.informative {color: #949494;}
+.tx-ftf-events td.event {background: #3e3e3e;}
+.tx-ftf-events td.act,
+.tx-ftf-events td:hover {background: #28c0da; cursor: pointer;}
+.tx-ftf-events td time {display: block; width: 28px; line-height: 27px; text-align: center;}
+.tx-ftf-events td .month-weekday-year {display: none;}
+
+.tx-ftf-events td ul {display: none;}
+
+.tx-ftf-events .navigation {margin-bottom: 20px;}
+
+.tx-ftf-events #calcontent {float: left; width: 50%}
+.tx-ftf-events .today {float: right; width: 45%;}
+	.tx-ftf-events .today .date {font: 160px Arial; color: #39c4dd;}
+	.tx-ftf-events .today .month-weekday-year {display: block; font-size: 25px;}
+.tx-ftf-events .agenda {clear: both; margin: 0 -25px -20px; height: 200px; overflow-y: scroll;}
+	.tx-ftf-events .agenda ul {list-style: none; margin: 0px; padding: 0;}
+	.tx-ftf-events .agenda li {margin: 0px; padding: 15px 25px; background: #454545;}
+	.tx-ftf-events .agenda li:nth-child(2n) {background: #171717;}
+	.tx-ftf-events .agenda .event-start {color: #38b9d0; font-size: 15px; margin-right: 20px;}
+	.tx-ftf-events .agenda .event-description {display: none;}
+
+.tx-ftf-events .calendar-changer {position: absolute; top: 0; right: 0;}
+.tx-ftf-events .calendar-menu {}

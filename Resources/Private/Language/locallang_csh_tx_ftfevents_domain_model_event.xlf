@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-03-25T12:42:04Z" product-name="ftf_events">
+		<header/>
+		<body>
+
+			<trans-unit id="title.description">
+				<source>The title of the event</source>
+			</trans-unit>
+			<trans-unit id="teaser.description">
+				<source>A short teaser text</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>A detailed description of the event</source>
+			</trans-unit>
+			<trans-unit id="location.description">
+				<source>The location of the event</source>
+			</trans-unit>
+			<trans-unit id="event_start.description">
+				<source>The starting date of the event</source>
+			</trans-unit>
+			<trans-unit id="event_stop.description">
+				<source>The ending time of the event</source>
+			</trans-unit>
+			<trans-unit id="recurring_days.description">
+				<source>The days of the week the event should occur at</source>
+			</trans-unit>
+			<trans-unit id="recurring_weeks.description">
+				<source>The weeks of the month the event should occur at</source>
+			</trans-unit>
+			<trans-unit id="recurring_stop.description">
+				<source>When to stop the recurring event</source>
+			</trans-unit>
+			<trans-unit id="calendar.description">
+				<source>The calendar of this event</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-03-25T12:42:04Z" product-name="ftf_events">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_ftfevents_domain_model_event">
+				<source>Event</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.event_start">
+				<source>Event Start</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.event_stop">
+				<source>Event Stop</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_days">
+				<source>Recurring Days</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_days.0">
+				<source>Monday</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_days.1">
+				<source>Tuesday</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_days.2">
+				<source>Wednesday</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_days.3">
+				<source>Thursday</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_days.4">
+				<source>Friday</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_days.5">
+				<source>Saturday</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_days.6">
+				<source>Sunday</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_weeks">
+				<source>Recurring Weeks</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_weeks.0">
+				<source>Every week</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_weeks.1">
+				<source>Every other week</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_weeks.2">
+				<source>Every third week</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_weeks.3">
+				<source>Every fourth week</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_weeks.4">
+				<source>Every fifth week</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.recurring_stop">
+				<source>Recurring Stop</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_event.calendar">
+				<source>Calendar</source>
+			</trans-unit>
+
+			<trans-unit id="tx_ftfevents_domain_model_calendar">
+				<source>Calendar</source>
+			</trans-unit>
+			<trans-unit id="tx_ftfevents_domain_model_calendar.name">
+				<source>Name</source>
+			</trans-unit>
+			
+			<trans-unit id="flexform.default.sheetTitle">
+				<source>Defaults</source>
+			</trans-unit>
+			<trans-unit id="flexform.default.switchableControllerActions">
+				<source>Default view</source>
+			</trans-unit>
+			<trans-unit id="flexform.default.switchableControllerActions.list">
+				<source>List of Events</source>
+			</trans-unit>
+			<trans-unit id="flexform.default.switchableControllerActions.calendar">
+				<source>Calendar View</source>
+			</trans-unit>
+			<trans-unit id="flexform.default.calendar">
+				<source>Show specific calendars</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
