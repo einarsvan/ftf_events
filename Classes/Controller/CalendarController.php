@@ -36,12 +36,12 @@ namespace FTF\FtfEvents\Controller;
 class CalendarController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
-	 * companyRepository
+	 * calendarRepository
 	 *
-	 * @var \FTF\FtfEvents\Domain\Repository\CompanyRepository
+	 * @var \FTF\FtfEvents\Domain\Repository\CalendarRepository
 	 * @inject
 	 */
-	protected $companyRepository;
+	protected $calendarRepository;
 
 	/**
 	 * action list
