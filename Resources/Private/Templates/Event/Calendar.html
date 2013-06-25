@@ -1,3 +1,4 @@
+
 <f:if condition="{ajax} != 1">
 
 <div class="tx-ftf-events">
@@ -7,7 +8,7 @@
 		
 </f:if>
 
-			<f:render partial="Event/Calendar" arguments="{_all}" />
+			<f:render partial="Event/Calendar" arguments="{calendar:calendar, calendars:calendars, selectedCalendar:selectedCalendar, nextMonth:nextMonth, prevMonth:prevMonth, selectedMonth: selectedMonth, selectedDate:selectedDate}" />
 
 <f:if condition="{ajax} != 1">
 		

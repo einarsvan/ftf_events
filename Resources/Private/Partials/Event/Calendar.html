@@ -1,3 +1,4 @@
+
 			<h2>
 			<f:if condition="{selectedCalendar} > 0">
 				<f:then>
@@ -35,7 +36,10 @@
 								<td class="{f:if(condition:'{day.disabled}', then:'informative', else:'current')}{f:if(condition:'{day.events}', then:' event', else:'')}{f:if(condition:'{day.active}', then:' act', else:'')}" >
 									<time datetime="<f:format.date format="Y-m-d">{day.date}</f:format.date>">
 										<span class="date"><f:format.date format="d">{day.date}</f:format.date></span>
-										<span class="month-weekday-year"><f:format.date format="F, l, Y">{day.date}</f:format.date></span>
+										<span class="month-weekday-year">
+											<f:format.date format="%B">{day.date}</f:format.date>,<br> 
+											<f:format.date format="%A, %Y">{day.date}</f:format.date>
+										</span>
 									</time>
 									<f:if condition="{day.events}">
 										<ul>
@@ -43,7 +47,7 @@
 												<li>
 													<span class="event-start"><f:format.date format="H:i">{event.eventStart}</f:format.date></span>
 													<span class="event-title">{event.title}</span>
-													<span class="event-description">{event.description} <span class="close-description">Luk</span></span>
+													<div class="event-description"><f:format.html>{event.description}</f:format.html> <span class="close-description">Luk</span></div>
 												</li>
 											</f:for>
 										</ul>
@@ -57,6 +61,13 @@
 			</table>
 			
 			<div class="navigation">
+				<span>
+					<f:for each="{calendar.1}" as="day" iteration="iteration">
+						<f:if condition="{iteration.isFirst}">
+							<f:format.date format="%B">{day.date}</f:format.date>
+						</f:if>
+					</f:for>
+				</span>
 				<f:link.action action="calendar" controller="Event" pageUid="{settings.listViewPid}" arguments="{start: prevMonth, calendar: selectedCalendar, active: selectedDate}" class="ajaxLink">Prev</f:link.action>
 				<f:link.action action="calendar" controller="Event" pageUid="{settings.listViewPid}" arguments="{start: nextMonth, calendar: selectedCalendar, active: selectedDate}" class="ajaxLink">Next</f:link.action>
 			</div>

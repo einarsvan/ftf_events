@@ -13,8 +13,9 @@ $(document).ready(function(){
 		$.ajax({
 			url: $(this).attr('href'),
 			data: {
-				eID: "FtfEvents",
+				//eID: "FtfEvents",
 				pluginName: "Event",
+				type: 110981,
 				"tx_ftfevents_event[ajax]": 1,
 				"tx_ftfevents_event[active]": activeDate
 			}
@@ -23,9 +24,14 @@ $(document).ready(function(){
 		});
 
 	}).on('click', '.event-title', function(){ // Show event description
-		$(this).siblings('.event-description').show();
+		var t = $(this);
+		if(t.hasClass('isopen')){
+			t.removeClass('isopen').siblings('.event-description').hide();
+		} else {
+			t.addClass('isopen').siblings('.event-description').show();
+		}
 	}).on('click', '.close-description', function(){ // Hide event description
-		$('.event-description').hide();
+		$(this).parent().hide().siblings('.event-title').removeClass('isopen');
 	});
 
 });

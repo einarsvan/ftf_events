@@ -1,5 +1,4 @@
 <?php
-namespace FTF\FtfEvents\Domain\Repository;
 
 /***************************************************************
  *  Copyright notice
@@ -33,7 +32,7 @@ namespace FTF\FtfEvents\Domain\Repository;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class CalendarRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+class Tx_FtfEvents_Domain_Repository_CalendarRepository extends Tx_Extbase_Persistence_Repository {
 
 
 }

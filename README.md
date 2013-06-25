@@ -1,4 +1,4 @@
-ftf_events
-==========
+ftf_events_45
+=============
 
-FTF Events is basically a fork of gb_events with some extra features and support for namespaces
+A clone of ftf_events, without namespacing, that supports TYPO3 4.5

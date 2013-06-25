@@ -1,5 +1,4 @@
 <?php
-namespace FTF\FtfEvents\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -32,12 +31,12 @@ namespace FTF\FtfEvents\Controller;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class Tx_FtfEvents_Controller_EventController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
 	 * eventRepository
 	 *
-	 * @var \FTF\FtfEvents\Domain\Repository\EventRepository
+	 * @var Tx_FtfEvents_Domain_Repository_EventRepository
 	 * @inject
 	 */
 	protected $eventRepository;
@@ -45,28 +44,44 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	/**
 	 * calendarRepository
 	 *
-	 * @var \FTF\FtfEvents\Domain\Repository\CalendarRepository
+	 * @var Tx_FtfEvents_Domain_Repository_CalendarRepository
 	 * @inject
 	 */
 	protected $calendarRepository;
-
+	
+	/**
+   * @param Tx_FtfEvents_Domain_Repository_EventRepository $eventRepository
+   * @return void
+   */
+  public function injectEventRepository(Tx_FtfEvents_Domain_Repository_EventRepository $eventRepository) {
+    $this->eventRepository = $eventRepository;
+  }
+  
+  /**
+   * @param Tx_FtfEvents_Domain_Repository_CalendarRepository $calendarRepository
+   * @return void
+   */
+  public function injectCalendarRepository(Tx_FtfEvents_Domain_Repository_CalendarRepository $calendarRepository) {
+    $this->calendarRepository = $calendarRepository;
+  }
+	
 	/**
 	 * action list
 	 *
 	 * @return void
 	 */
 	public function listAction() {
-		$events = $this->eventRepository->findAll($this->settings);
+		$events = $this->eventRepository->findAll($calendar);
 		$this->view->assign('events', $events);
 	}
 	
 	/**
 	 * action show
 	 *
-	 * @param \FTF\FtfEvents\Domain\Model\Event $event
+	 * @param Tx_FtfEvents_Domain_Model_Event $event
 	 * @return void
 	 */
-	public function showAction(\FTF\FtfEvents\Domain\Model\Event $event) {
+	public function showAction(Tx_FtfEvents_Domain_Model_Event $event) {
 		$this->view->assign('event', $event);
 	}
 	
@@ -80,11 +95,10 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
    * @return void
    */
   public function calendarAction($start = 'today', $calendar = 0, $ajax = 0, $active = 'today') {
-  
-  
+    
     // Set start date
     // See http://www.php.net/manual/en/datetime.formats.relative.php
-    $startDate = new \DateTime('today');
+    $startDate = new DateTime('today');
     try {
       $startDate->modify($start);
     } catch(Exception $e) {
@@ -121,7 +135,7 @@ class EventController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     }
     
     // Set active date (TODO: overwrite this from params...)
-    $actDate = new \DateTime($active);
+    $actDate = new DateTime($active);
     $days[$actDate->format("Y-m-d")]['active'] = 1;
     
     

@@ -3,22 +3,22 @@
     <sDEF>
       <ROOT>
         <TCEforms>
-          <sheetTitle>LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:flexform.default.sheetTitle</sheetTitle>
+          <sheetTitle>LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:flexform.default.sheetTitle</sheetTitle>
         </TCEforms>
         <type>array</type>
         <el>
           <switchableControllerActions>
             <TCEforms>
-              <label>LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:flexform.default.switchableControllerActions</label>
+              <label>LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:flexform.default.switchableControllerActions</label>
               <config>
                 <type>select</type>
                 <items type="array">
                   <numIndex index="0" type="array">
-                    <numIndex index="0">LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:flexform.default.switchableControllerActions.list</numIndex>
+                    <numIndex index="0">LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:flexform.default.switchableControllerActions.list</numIndex>
                     <numIndex index="1">Event->list;Event->calendar;Event->show</numIndex>
                   </numIndex>
                   <numIndex index="1" type="array">
-                    <numIndex index="0">LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:flexform.default.switchableControllerActions.calendar</numIndex>
+                    <numIndex index="0">LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:flexform.default.switchableControllerActions.calendar</numIndex>
                     <numIndex index="1">Event->calendar;Event->list;Event->show</numIndex>
                   </numIndex>
                 </items>
@@ -29,7 +29,7 @@
           </switchableControllerActions>
           <settings.calendar>
 	      		<TCEforms>
-		      		<label>LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:flexform.default.calendar</label>
+		      		<label>LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:flexform.default.calendar</label>
 							<config>
 								<type>group</type>
 								<internal_type>db</internal_type>

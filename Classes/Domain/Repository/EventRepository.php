@@ -1,5 +1,4 @@
 <?php
-namespace FTF\FtfEvents\Domain\Repository;
 
 /***************************************************************
  *  Copyright notice
@@ -32,7 +31,7 @@ namespace FTF\FtfEvents\Domain\Repository;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class EventRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
+class Tx_FtfEvents_Domain_Repository_EventRepository extends Tx_Extbase_Persistence_Repository {
 	
   /**
    * findAll function.
@@ -43,9 +42,9 @@ class EventRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
   public function findAll($calendar = 0) {
   	 
     $query = $this->createQuery();
-    $query->setOrderings(array('event_start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING));
+//    $query->setOrderings(array('event_start' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING));
     $query->matching(
-    	$query->greaterThanOrEqual('event_start', new \DateTime('midnight'))
+    	$query->greaterThanOrEqual('event_start', new DateTime('midnight'))
     );
     return $query->execute();
   }
@@ -59,7 +58,7 @@ class EventRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	 * @param int $calendar
 	 * @return void
 	 */
-	public function findAllBetween(\DateTime $startDate, \DateTime $stopDate, $calendar = 0) {
+	public function findAllBetween(DateTime $startDate, DateTime $stopDate, $calendar = 0) {
 		
 		// Stupid way of ensuring all calendars are shown
 		if($calendar == 0){
@@ -70,7 +69,8 @@ class EventRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 		}
 		
     $query = $this->createQuery();
-    $query->setOrderings(array('event_start' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING));
+    $query->setOrderings(array('event_start' => Tx_Extbase_Persistence_QueryInterface::ORDER_ASCENDING));
+    $query->getQuerySettings()->setRespectStoragePage(FALSE);
     $query->matching(
     	
     	$query->logicalAnd(
@@ -100,7 +100,6 @@ class EventRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
     	)
     	
     );
-    
     return $query->execute();
   }
 

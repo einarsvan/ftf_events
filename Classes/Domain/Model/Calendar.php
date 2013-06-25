@@ -1,5 +1,4 @@
 <?php
-namespace FTF\FtfEvents\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -32,12 +31,12 @@ namespace FTF\FtfEvents\Domain\Model;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Calendar extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Tx_FtfEvents_Domain_Model_Calendar extends Tx_Extbase_DomainObject_AbstractEntity {
 
 	/**
 	 * The name of the calendar
 	 *
-	 * @var \string
+	 * @var string
 	 * @validate NotEmpty
 	 */
 	protected $name;
@@ -45,7 +44,7 @@ class Calendar extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the name
 	 *
-	 * @return \string $name
+	 * @return string $name
 	 */
 	public function getName() {
 		return $this->name;
@@ -54,7 +53,7 @@ class Calendar extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the name
 	 *
-	 * @param \string $name
+	 * @param string $name
 	 * @return void
 	 */
 	public function setName($name) {

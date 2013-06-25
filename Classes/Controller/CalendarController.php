@@ -1,5 +1,4 @@
 <?php
-namespace FTF\FtfEvents\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -33,15 +32,23 @@ namespace FTF\FtfEvents\Controller;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class CalendarController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class Tx_FtfEvents_Controller_CalendarController extends Tx_Extbase_MVC_Controller_ActionController {
 
 	/**
-	 * calendarRepository
+	 * companyRepository
 	 *
-	 * @var \FTF\FtfEvents\Domain\Repository\CalendarRepository
+	 * @var Tx_FtfEvents_Domain_Repository_CalendarRepository
 	 * @inject
 	 */
 	protected $calendarRepository;
+
+	/**
+   * @param Tx_FtfEvents_Domain_Repository_CalendarRepository $calendarRepository
+   * @return void
+   */
+  public function injectCalendarRepository(Tx_FtfEvents_Domain_Repository_CalendarRepository $calendarRepository) {
+    $this->calendarRepository = $calendarRepository;
+  }
 
 	/**
 	 * action list
@@ -56,10 +63,10 @@ class CalendarController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	/**
 	 * action show
 	 *
-	 * @param \FTF\FtfEvents\Domain\Model\Calendar $calendar
+	 * @param Tx_FtfEvents_Domain_Model_Calendar $calendar
 	 * @return void
 	 */
-	public function showAction(\FTF\FtfEvents\Domain\Model\Calendar $calendar) {
+	public function showAction(Tx_FtfEvents_Domain_Model_Calendar $calendar) {
 		$this->view->assign('calendar', $calendar);
 	}
 	

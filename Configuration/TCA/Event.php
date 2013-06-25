@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $TCA['tx_ftfevents_domain_model_event'] = array(
 	'ctrl' => $TCA['tx_ftfevents_domain_model_event']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, teaser, description, location, event_start, event_stop, recurring_days, recurring_weeks, recurring_stop, calendar',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, description, location, event_start, event_stop, recurring_days, recurring_weeks, recurring_stop, calendar',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, teaser, description, location, event_start, event_stop, recurring_days, recurring_weeks, recurring_stop, calendar,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, title, description, location, event_start, event_stop, recurring_days, recurring_weeks, recurring_stop, calendar,--div--;LLL:EXT:cms/locallang_ttc.xml:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -17,21 +17,21 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 	'columns' => array(
 		'sys_language_uid' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.language',
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.language',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'sys_language',
 				'foreign_table_where' => 'ORDER BY sys_language.title',
 				'items' => array(
-					array('LLL:EXT:lang/locallang_general.xlf:LGL.allLanguages', -1),
-					array('LLL:EXT:lang/locallang_general.xlf:LGL.default_value', 0)
+					array('LLL:EXT:lang/locallang_general.xml:LGL.allLanguages', -1),
+					array('LLL:EXT:lang/locallang_general.xml:LGL.default_value', 0)
 				),
 			),
 		),
 		'l10n_parent' => array(
 			'displayCond' => 'FIELD:sys_language_uid:>:0',
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.l18n_parent',
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.l18n_parent',
 			'config' => array(
 				'type' => 'select',
 				'items' => array(
@@ -47,7 +47,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 			),
 		),
 		't3ver_label' => array(
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.versionLabel',
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.versionLabel',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -56,7 +56,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		),
 		'hidden' => array(
 			'exclude' => 1,
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.hidden',
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.hidden',
 			'config' => array(
 				'type' => 'check',
 			),
@@ -64,7 +64,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		'starttime' => array(
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.starttime',
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.starttime',
 			'config' => array(
 				'type' => 'input',
 				'size' => 13,
@@ -80,7 +80,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		'endtime' => array(
 			'exclude' => 1,
 			'l10n_mode' => 'mergeIfNotBlank',
-			'label' => 'LLL:EXT:lang/locallang_general.xlf:LGL.endtime',
+			'label' => 'LLL:EXT:lang/locallang_general.xml:LGL.endtime',
 			'config' => array(
 				'type' => 'input',
 				'size' => 13,
@@ -95,7 +95,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		),
 		'title' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.title',
+			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.title',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -104,7 +104,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		),
 		'teaser' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.teaser',
+			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.teaser',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -114,7 +114,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		),
 		'description' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.description',
+			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.description',
 			'config' => array(
 				'type' => 'text',
 				'cols' => 40,
@@ -126,7 +126,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 						'notNewRecords'=> 1,
 						'RTEonly' => 1,
 						'script' => 'wizard_rte.php',
-						'title' => 'LLL:EXT:cms/locallang_ttc.xlf:bodytext.W.RTE',
+						'title' => 'LLL:EXT:cms/locallang_ttc.xml:bodytext.W.RTE',
 						'type' => 'script'
 					)
 				)
@@ -135,7 +135,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		),
 		'location' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.location',
+			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.location',
 			'config' => array(
 				'type' => 'input',
 				'size' => 30,
@@ -144,7 +144,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		),
 		'event_start' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.event_start',
+			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.event_start',
 			'config' => array(
 				'type' => 'input',
 				'size' => 10,
@@ -155,7 +155,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		),
 		'event_stop' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.event_stop',
+			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.event_stop',
 			'config' => array(
 				'type' => 'input',
 				'size' => 10,
@@ -166,37 +166,37 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		),
 		'recurring_days' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_days',
+			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_days',
 			'config' => array(
 				'type' => 'check',
         'items' => array(
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_days.0', ''),
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_days.1', ''),
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_days.2', ''),
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_days.3', ''),
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_days.4', ''),
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_days.5', ''),
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_days.6', '')
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_days.0', ''),
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_days.1', ''),
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_days.2', ''),
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_days.3', ''),
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_days.4', ''),
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_days.5', ''),
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_days.6', '')
         )
 			),
 		),
 		'recurring_weeks' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_weeks',
+			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_weeks',
 			'config' => array(
 				'type' => 'check',
         'items' => array(
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_weeks.0', ''),
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_weeks.1', ''),
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_weeks.2', ''),
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_weeks.3', ''),
-          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_weeks.4', '')
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_weeks.0', ''),
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_weeks.1', ''),
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_weeks.2', ''),
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_weeks.3', ''),
+          array('LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_weeks.4', '')
         )			
       ),
 		),
 		'recurring_stop' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.recurring_stop',
+			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.recurring_stop',
 			'config' => array(
 				'type' => 'input',
 				'size' => 10,
@@ -206,7 +206,7 @@ $TCA['tx_ftfevents_domain_model_event'] = array(
 		),
 		'calendar' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xlf:tx_ftfevents_domain_model_event.calendar',
+			'label' => 'LLL:EXT:ftf_events/Resources/Private/Language/locallang_db.xml:tx_ftfevents_domain_model_event.calendar',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_ftfevents_domain_model_calendar',

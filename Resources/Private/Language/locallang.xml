@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for plugin belonging to extension 'ftf_events'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_ftfevents_domain_model_event">Event</label>
+			<label index="tx_ftfevents_domain_model_event.title">The title of the event</label>
+			<label index="tx_ftfevents_domain_model_event.teaser">A short teaser text</label>
+			<label index="tx_ftfevents_domain_model_event.description">A detailed description of the event</label>
+			<label index="tx_ftfevents_domain_model_event.location">The location of the event</label>
+			<label index="tx_ftfevents_domain_model_event.event_start">The starting date of the event</label>
+			<label index="tx_ftfevents_domain_model_event.event_stop">The ending time of the event</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_days">The days of the week the event should occur at</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_weeks">The weeks of the month the event should occur at</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_stop">When to stop the recurring event</label>
+			<label index="tx_ftfevents_domain_model_event.calendar">The calendar of this event</label>
+			<label index="tx_ftfevents_domain_model_calendar">Calendar</label>
+			<label index="tx_ftfevents_domain_model_calendar.name">The name of the calendar</label>
+		</languageKey>
+	</data>
+</T3locallang>

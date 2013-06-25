@@ -1,5 +1,4 @@
 <?php
-namespace FTF\FtfEvents\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -32,12 +31,12 @@ namespace FTF\FtfEvents\Domain\Model;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Tx_FtfEvents_Domain_Model_Event extends Tx_Extbase_DomainObject_AbstractEntity {
 
 	/**
 	 * The title of the event
 	 *
-	 * @var \string
+	 * @var string
 	 * @validate NotEmpty
 	 */
 	protected $title;
@@ -45,28 +44,28 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * A short teaser text
 	 *
-	 * @var \string
+	 * @var string
 	 */
 	protected $teaser;
 
 	/**
 	 * A detailed description of the event
 	 *
-	 * @var \string
+	 * @var string
 	 */
 	protected $description;
 
 	/**
 	 * The location of the event
 	 *
-	 * @var \string
+	 * @var string
 	 */
 	protected $location;
 
 	/**
 	 * The starting date of the event
 	 *
-	 * @var \DateTime
+	 * @var DateTime
 	 * @validate NotEmpty
 	 */
 	protected $eventStart;
@@ -74,7 +73,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * The ending time of the event
 	 *
-	 * @var \DateTime
+	 * @var DateTime
 	 * @validate NotEmpty
 	 */
 	protected $eventStop;
@@ -82,35 +81,35 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * The days of the week the event should occur at
 	 *
-	 * @var \integer
+	 * @var integer
 	 */
 	protected $recurringDays;
 
 	/**
 	 * The weeks of the month the event should occur at
 	 *
-	 * @var \integer
+	 * @var integer
 	 */
 	protected $recurringWeeks;
 
 	/**
 	 * When to stop the recurring event
 	 *
-	 * @var \DateTime
+	 * @var DateTime
 	 */
 	protected $recurringStop;
 
 	/**
 	 * The calendar of this event
 	 *
-	 * @var \FTF\FtfEvents\Domain\Model\Calendar
+	 * @var Tx_FtfEvents_Domain_Model_Calendar
 	 */
 	protected $calendar;
 
 	/**
 	 * Returns the title
 	 *
-	 * @return \string $title
+	 * @return string $title
 	 */
 	public function getTitle() {
 		return $this->title;
@@ -119,7 +118,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the title
 	 *
-	 * @param \string $title
+	 * @param string $title
 	 * @return void
 	 */
 	public function setTitle($title) {
@@ -129,7 +128,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the teaser
 	 *
-	 * @return \string $teaser
+	 * @return string $teaser
 	 */
 	public function getTeaser() {
 		return $this->teaser;
@@ -138,7 +137,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the teaser
 	 *
-	 * @param \string $teaser
+	 * @param string $teaser
 	 * @return void
 	 */
 	public function setTeaser($teaser) {
@@ -148,7 +147,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the description
 	 *
-	 * @return \string $description
+	 * @return string $description
 	 */
 	public function getDescription() {
 		return $this->description;
@@ -157,7 +156,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the description
 	 *
-	 * @param \string $description
+	 * @param string $description
 	 * @return void
 	 */
 	public function setDescription($description) {
@@ -167,7 +166,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the location
 	 *
-	 * @return \string $location
+	 * @return string $location
 	 */
 	public function getLocation() {
 		return $this->location;
@@ -176,7 +175,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the location
 	 *
-	 * @param \string $location
+	 * @param string $location
 	 * @return void
 	 */
 	public function setLocation($location) {
@@ -186,17 +185,16 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the eventStart
 	 *
-	 * @return \DateTime $eventStart
+	 * @return DateTime $eventStart
 	 */
 	public function getEventStart() {
 		return $this->eventStart;
-//		return $this->eventStart->modify('midnight');
 	}
 
 	/**
 	 * Sets the eventStart
 	 *
-	 * @param \DateTime $eventStart
+	 * @param DateTime $eventStart
 	 * @return void
 	 */
 	public function setEventStart($eventStart) {
@@ -206,17 +204,16 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the eventStop
 	 *
-	 * @return \DateTime $eventStop
+	 * @return DateTime $eventStop
 	 */
 	public function getEventStop() {
 	return $this->eventStop;
-//		return ($this->eventStop == '') ? $this->eventStart : $this->eventStop;
 	}
 
 	/**
 	 * Sets the eventStop
 	 *
-	 * @param \DateTime $eventStop
+	 * @param DateTime $eventStop
 	 * @return void
 	 */
 	public function setEventStop($eventStop) {
@@ -226,7 +223,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the recurringDays
 	 *
-	 * @return \integer $recurringDays
+	 * @return integer $recurringDays
 	 */
 	public function getRecurringDays() {
 		return $this->recurringDays;
@@ -235,7 +232,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the recurringDays
 	 *
-	 * @param \integer $recurringDays
+	 * @param integer $recurringDays
 	 * @return void
 	 */
 	public function setRecurringDays($recurringDays) {
@@ -245,7 +242,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the recurringWeeks
 	 *
-	 * @return \integer $recurringWeeks
+	 * @return integer $recurringWeeks
 	 */
 	public function getRecurringWeeks() {
 		return $this->recurringWeeks;
@@ -254,7 +251,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the recurringWeeks
 	 *
-	 * @param \integer $recurringWeeks
+	 * @param integer $recurringWeeks
 	 * @return void
 	 */
 	public function setRecurringWeeks($recurringWeeks) {
@@ -264,7 +261,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the recurringStop
 	 *
-	 * @return \DateTime $recurringStop
+	 * @return DateTime $recurringStop
 	 */
 	public function getRecurringStop() {
 		return $this->recurringStop;
@@ -273,7 +270,7 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the recurringStop
 	 *
-	 * @param \DateTime $recurringStop
+	 * @param DateTime $recurringStop
 	 * @return void
 	 */
 	public function setRecurringStop($recurringStop) {
@@ -309,10 +306,10 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
    * @param DateTime $startDate
    * @param DateTime $stopDate
    */
-  public function getEventDates(\DateTime $startDate, \DateTime $stopDate) {
+  public function getEventDates(DateTime $startDate, DateTime $stopDate) {
   
-    $oneDay = new \DateInterval('P1D');
-    $oneMonth = new \DateInterval('P1M');
+    $oneDay = new DateInterval('P1D');
+    $oneMonth = new DateInterval('P1M');
 
     $startMonth = clone($startDate);
     $startMonth->modify('first day of this month');
@@ -506,13 +503,13 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
       $hours = $matches[1];
       $minutes = $matches[2];
     }
-    return new \DateInterval(sprintf("PT%dH%dM0S", $hours, $minutes));
+    return new DateInterval(sprintf("PT%dH%dM0S", $hours, $minutes));
   }
 	
 	/**
 	 * Returns the calendar
 	 *
-	 * @return \FTF\FtfEvents\Domain\Model\Calendar $calendar
+	 * @return Tx_FtfEvents_Domain_Model_Calendar $calendar
 	 */
 	public function getCalendar() {
 		return $this->calendar;
@@ -521,10 +518,10 @@ class Event extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the calendar
 	 *
-	 * @param \FTF\FtfEvents\Domain\Model\Calendar $calendar
+	 * @param Tx_FtfEvents_Domain_Model_Calendar $calendar
 	 * @return void
 	 */
-	public function setCalendar(\FTF\FtfEvents\Domain\Model\Calendar $calendar) {
+	public function setCalendar(Tx_FtfEvents_Domain_Model_Calendar $calendar) {
 		$this->calendar = $calendar;
 	}
 

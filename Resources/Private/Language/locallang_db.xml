@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'ftf_events'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_ftfevents_domain_model_event">Event</label>
+			<label index="tx_ftfevents_domain_model_event.title">Title</label>
+			<label index="tx_ftfevents_domain_model_event.teaser">Teaser</label>
+			<label index="tx_ftfevents_domain_model_event.description">Description</label>
+			<label index="tx_ftfevents_domain_model_event.location">Location</label>
+			<label index="tx_ftfevents_domain_model_event.event_start">Event Start</label>
+			<label index="tx_ftfevents_domain_model_event.event_stop">Event Stop</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_days">Recurring Days</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_days.0">Monday</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_days.1">Tuesday</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_days.2">Wednesday</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_days.3">Thursday</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_days.4">Friday</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_days.5">Saturday</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_days.6">Sunday</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_weeks">Recurring Weeks</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_weeks.0">Every week</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_weeks.1">Every other week</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_weeks.2">Every third week</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_weeks.3">Every fourth week</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_weeks.4">Every fifth week</label>
+			<label index="tx_ftfevents_domain_model_event.recurring_stop">Recurring Stop</label>
+			<label index="tx_ftfevents_domain_model_event.calendar">Calendar</label>
+			<label index="tx_ftfevents_domain_model_calendar">Calendar</label>
+			<label index="tx_ftfevents_domain_model_calendar.name">Name</label>
+			<label index="flexform.default.sheetTitle">Defaults</label>
+			<label index="flexform.default.switchableControllerActions">Default view</label>
+			<label index="flexform.default.switchableControllerActions.list">List of Events</label>
+			<label index="flexform.default.switchableControllerActions.calendar">Calendar View</label>
+			<label index="flexform.default.calendar">Show specific calendars</label>
+		</languageKey>
+	</data>
+</T3locallang>
